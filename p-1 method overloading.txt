@@ -1,0 +1,39 @@
+using System;
+
+namespace Day_4
+{
+					
+public class Program
+{
+	int a=2,b=4;
+	
+	public void Mul()
+	{
+		Console.WriteLine("Mul is :"+ (a*b));
+	}
+	public void Mul(int a,int b)
+	{
+		Console.WriteLine("Mul is :"+ (a*b));
+	}
+	public int Mul(int a,int b,int c)
+	{
+		return (a*b*c);
+	}
+	public void Mul(string a,string b)
+	{
+		Console.WriteLine("Mul is:"+ (Convert.ToInt32(a)*Convert.ToInt32(b)));
+	}
+
+	
+		
+	public static void Main()
+	{
+		Program p=new Program();
+		p.Mul();
+		p.Mul(5,2);
+		p.Mul("6","4");
+		p.Mul(1,2,3);
+		Console.ReadLine();
+	}
+}
+}

@@ -1,0 +1,37 @@
+using System;
+
+namespace Day_4
+{
+					
+public class Mul
+{
+	public int n1,n2;
+	public Mul(int n1,int n2)
+	{
+		this.n1=n1;
+		this.n2=n2;
+	}
+	
+	public static Mul operator *(Mul m1,Mul m2)
+	{
+		Mul m3=new Mul(0,0);
+		m3.n1=m1.n1 * m2.n1;
+		m3.n2=m1.n2 * m2.n2;
+		return m3;
+	}
+}
+	public class Program
+	{
+		public static void Main()
+		{
+			Mul m1 = new Mul(2,4);
+			Mul m2= new Mul(2,5);
+			Mul m3 = new Mul(0,0);
+			Console.WriteLine("values before MUL n1:" +m3.n1+ "n2:" +m3.n2);
+			m3 = m1 * m2;
+			Console.WriteLine("values after MUL n1:" +m3.n1+ "n2:" +m3.n2);
+			Console.ReadLine();
+		}
+	}
+}
+			
